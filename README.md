@@ -1,4 +1,4 @@
-# This is a futbol API
+# This is a Futbol API
 
 Currently it only works for league standings.
 
