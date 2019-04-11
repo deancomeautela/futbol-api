@@ -3,7 +3,7 @@
 Currently it only works for league standings.
 
 # How to use:
- - You make a `GET` request to the server and the api will respond with a JSON with the league standings for the league requested, which for a good request will look something like this:
+ - You make a `GET` request to the server and the api will respond with a JSON with the standings for the league requested, which for a good request will look something like this:
    ```json
     {
         "message": "Standings for ESP",
@@ -27,6 +27,6 @@ Currently it only works for league standings.
         "message": "League ASDF not found"
     }
    ```
- - The request will look something like this:
+ - The request will look like this:
    - `localhost:8080/standings/<league>`
 - League is the abbreviation of the leagues name, for example Spain would be `esp`, BPL would be `eng`, Series A would be `ita`, and so on.
