@@ -16,18 +16,15 @@ class Standings:
         teams = soup.find_all(class_='team-link flex items-center clr-gray-03')
         return teams
 
-    # get name from a team
     def get_name(self, team):
         return team.a.img.get('title')
 
-    # get the position from a team
     def get_position(self, team):
         return team.find(class_='team-position ml2 pr3').text
 
-    # get an array of dictionaries, each dictionary contains a team name, and
-    # its position on the table
-    # it maps each team to get their name, and position
-    def get_teams_array(self):
+    # returns response to the api as an array of dictionaries containing
+    # the team names and their position from the leage specified
+    def get_league_standings(self):
         teams = self.get_teams()
         names = map(self.get_name, teams)
         positions = map(self.get_position, teams)
