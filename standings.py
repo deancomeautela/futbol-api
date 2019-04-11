@@ -32,14 +32,14 @@ class Standings:
         for name, position in zip(names, positions):
             teams_array.append({'team': name, 'position': int(position)})
         if not teams_array:
-            message = 'League ' + self.league.upper() + ' not found'
-            code = 204
+            response = {
+                'message': 'League ' + self.league.upper() + ' not found',
+                'code': 204
+            }
         else:
-            message = 'Standigs for ' + self.league.upper()
-            code = 200
-        response = {
-            'code': code,
-            'message': message,
-            'teams': teams_array
+            response = {
+                'message': 'Standigs for ' + self.league.upper(),
+                'code': 200,
+                'teams': teams_array
             }
         return response
