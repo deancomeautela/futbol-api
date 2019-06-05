@@ -34,7 +34,7 @@ class Standings:
         if not teams_array:
             response = {
                 'message': 'League ' + self.league.upper() + ' not found',
-                'code': 204
+                'code': 402
             }
         else:
             response = {
